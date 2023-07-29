@@ -4,6 +4,7 @@ import Home from "./containers/Home/Home";
 import {Route, Routes} from "react-router-dom";
 import AddCategory from "./containers/categories/AddCategory/AddCategory";
 import Categories from "./containers/categories/Categories/Categories";
+import EditCategory from "./containers/categories/EditCategory/EditCategory";
 
 const App = () => {
     return (
@@ -11,7 +12,8 @@ const App = () => {
             <Routes>
                 <Route path="/" element={(<Home />)} />
                 <Route path="/categories" element={(<Categories />)} />
-                <Route path="/add-category" element={(<AddCategory />)} />
+                <Route path="/categories/add-category" element={(<AddCategory />)} />
+                <Route path="/categories/edit-category/:id" element={(<EditCategory />)} />
                 <Route path="*" element={(
                     <h1>Not Found!</h1>
                 )}/>

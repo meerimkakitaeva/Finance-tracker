@@ -10,3 +10,7 @@ export interface ICategoryMutation {
     name: string;
     type: string;
 }
+
+export interface ICategoriesList {
+    [id: string]: ICategoryMutation;
+}

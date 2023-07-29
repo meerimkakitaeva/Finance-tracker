@@ -1,4 +1,4 @@
 export const TYPES  = [
-    {type: 'Income', id: 'income'},
-    {type: 'Expense', id: 'expense'},
+    {type: 'income', id: 'income'},
+    {type: 'expense', id: 'expense'},
 ];
