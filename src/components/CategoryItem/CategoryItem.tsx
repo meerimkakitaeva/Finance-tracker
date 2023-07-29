@@ -24,7 +24,7 @@ const CategoryItem: React.FC<Props> = ({category}) => {
 
     return (
         <div>
-            <div className="card card-show  mt-5" style={{ width: 600 }}>
+            <div className="card card-show  mt-3" style={{ width: 600 }}>
                 <div className="card-body text-center d-flex flex-row justify-content-between">
                     <h6 className="card-text">{category.name}</h6>
                     <div className="d-flex">
