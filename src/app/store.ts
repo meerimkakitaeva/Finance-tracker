@@ -1,6 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
+import {trackerReducer} from "../store/trackerSlice";
 export const store = configureStore({
-   reducer: {},
+   reducer: {
+      tracker: trackerReducer,
+   },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
