@@ -5,6 +5,7 @@ import {selectCategories, selectFetchCategories} from "../../../store/trackerSli
 import {fetchCategories} from "../../../store/trackerThunk";
 import CategoryItem from "../../../components/CategoryItem/CategoryItem";
 import Spinner from "../../../components/Spinner/Spinner";
+import Toolbar from "../../../components/Toolbar/Toolbar";
 
 const Categories = () => {
     const dispatch = useAppDispatch();
@@ -24,9 +25,12 @@ const Categories = () => {
     }, [dispatch]);
 
     return (
-        <div className="posts-container mt-3">
-            <Link className="btn btn-outline-success" to="/categories/add-category">Add</Link>
-            {categories}
+        <div>
+            <Toolbar />
+            <div className="posts-container mt-3">
+                <Link className="btn btn-outline-success" to="/categories/add-category">Add</Link>
+                {categories}
+            </div>
         </div>
     );
 };

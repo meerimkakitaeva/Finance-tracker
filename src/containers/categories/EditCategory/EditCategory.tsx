@@ -22,19 +22,23 @@ const EditCategory = () => {
 
     useEffect(() => {
         dispatch(fetchOneCategory(id!));
-    }, [dispatch, id]);
+    }, [dispatch]);
 
     return (
         <div>
             <div>
-                {category &&
-                <CategoryForm
-                    onSubmit={onSubmit}
-                    existingCategory={category}
-                    isLoading={editLoading}
-                    isEdit
-                />
-                }
+                {oneLoading ? (
+                    <Spinner />
+                ) : (
+                    category && (
+                        <CategoryForm
+                            onSubmit={onSubmit}
+                            existingCategory={category}
+                            isLoading={editLoading}
+                            isEdit
+                        />
+                    )
+                )}
             </div>
         </div>
     );

@@ -15,6 +15,7 @@ const initialState = {
     name: '',
 }
 
+
 const CategoryForm: React.FC<Props> = ({onSubmit, existingCategory = initialState, isEdit, isLoading}) => {
     const [newCategory, setCategory] = useState<ICategoryMutation>(existingCategory);
 
@@ -34,7 +35,6 @@ const CategoryForm: React.FC<Props> = ({onSubmit, existingCategory = initialStat
            ...newCategory,
         });
     };
-
 
     return (
         <form onSubmit={onFormSubmit} className="posts-container">
