@@ -127,12 +127,13 @@ export const trackerSlice = createSlice({
             state.transactions = action.payload;
             state.fetchTransactionsLoading = false;
             state.total = state.transactions.reduce((acc, transaction) => {
+                const transactionAmount = Number(transaction.amount);
+
                 if (transaction.type === 'income') {
-                    return acc + transaction.amount
+                    return acc + transactionAmount;
                 } else {
-                    return acc - transaction.amount
+                    return acc - transactionAmount;
                 }
-                return acc;
             }, 0);
         });
         builder.addCase(fetchTransactions.rejected, (state) => {
